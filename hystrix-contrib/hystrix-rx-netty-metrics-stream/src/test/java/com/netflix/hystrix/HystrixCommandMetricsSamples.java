@@ -15,8 +15,6 @@
  */
 package com.netflix.hystrix;
 
-import com.netflix.hystrix.strategy.eventnotifier.HystrixEventNotifierDefault;
-
 /**
  * Not very elegant, but there is no other way to create this data directly for testing
  * purposes, as {@link com.netflix.hystrix.HystrixCommandMetrics} has no public constructors,
@@ -42,6 +40,13 @@ public class HystrixCommandMetricsSamples {
         }
     }
 
+    private static class MyHystrixThreadPoolKey implements HystrixThreadPoolKey {
+        @Override
+        public String name() {
+            return "hystrixThreadPoolKey";
+        }
+    }
+
     private static class MyHystrixCommandProperties extends HystrixCommandProperties {
         protected MyHystrixCommandProperties(HystrixCommandKey key) {
             super(key);
@@ -50,7 +55,7 @@ public class HystrixCommandMetricsSamples {
 
     static {
         HystrixCommandKey key = new MyHystrixCommandKey();
-        SAMPLE_1 = new HystrixCommandMetrics(key, new MyHystrixCommandGroupKey(),
-                new MyHystrixCommandProperties(key), HystrixEventNotifierDefault.getInstance());
+        SAMPLE_1 = HystrixCommandMetrics.getInstance(key, new MyHystrixCommandGroupKey(), new MyHystrixThreadPoolKey(),
+                new MyHystrixCommandProperties(key));
     }
 }

@@ -1,5 +1,90 @@
 # Hystrix Releases #
 
+### Version 1.4.14 ([Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.netflix.hystrix%22%20AND%20v%3A%221.4.14%22), [Bintray](https://bintray.com/netflixoss/maven/Hystrix/1.4.14/)) ###
+
+* [Pull 852](https://github.com/Netflix/Hystrix/pull/852) Fix hystrix-clj that was blocking http://dev.clojure.org/jira/browse/CLJ-1232
+* [Pull 849](https://github.com/Netflix/Hystrix/pull/849) Unit tests for HystrixCommands that are part of a class hierarchy with other HystrixCommands
+
+### Version 1.4.13 ([Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.netflix.hystrix%22%20AND%20v%3A%221.4.13%22), [Bintray](https://bintray.com/netflixoss/maven/Hystrix/1.4.13/)) ###
+
+* [Pull 839](https://github.com/Netflix/Hystrix/pull/839) Fix typo in hystrix-dashboard js
+* [Pull 838](https://github.com/Netflix/Hystrix/pull/838) Add back unit tests for Hystrix class and its reset() method in particular
+* [Pull 837](https://github.com/Netflix/Hystrix/pull/837) Upgrade to RxJava 1.0.13
+* [Pull 830](https://github.com/Netflix/Hystrix/pull/830) Add validation for rollingCountBadRequest in hystrix-dashboard
+
+### Version 1.4.12 ([Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.netflix.hystrix%22%20AND%20v%3A%221.4.12%22), [Bintray](https://bintray.com/netflixoss/maven/Hystrix/1.4.12/)) ###
+
+* [Pull 826](https://github.com/Netflix/Hystrix/pull/826) Safely handle negative input for delay parameter to metrics stream servlet
+* [Pull 825](https://github.com/Netflix/Hystrix/pull/825) Only check bucket properties at HystrixRollingNumber construction
+* [Pull 824](https://github.com/Netflix/Hystrix/pull/824) Only check bucket properties at HystrixRollingPercentile construction
+* [Pull 823](https://github.com/Netflix/Hystrix/pull/823) Fix half hidden mean metric in Hystrix Dashboard because of container height
+* [Pull 818](https://github.com/Netflix/Hystrix/pull/818) Only check maxQueueSize value at thread pool construction
+
+### Version 1.4.11 ([Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.netflix.hystrix%22%20AND%20v%3A%221.4.11%22), [Bintray](https://bintray.com/netflixoss/maven/Hystrix/1.4.11/)) ###
+
+* [Pull 814](https://github.com/Netflix/Hystrix/pull/814) Upgrade to RxJava 1.0.12
+* [Pull 813](https://github.com/Netflix/Hystrix/pull/813) Output something when Hystrix falls back on recoverable java.lang.Error
+* [Pull 812](https://github.com/Netflix/Hystrix/pull/812) Fixing overload functions in hystrix-clj
+* [Pull 808](https://github.com/Netflix/Hystrix/pull/808) Update Hystrix Metrics Stream README
+
+### Version 1.4.10 ([Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.netflix.hystrix%22%20AND%20v%3A%221.4.10%22), [Bintray](https://bintray.com/netflixoss/maven/Hystrix/1.4.10/)) ###
+
+* [Pull 804](https://github.com/Netflix/Hystrix/pull/804) Fix memory leak by switching back to AtomicIntegerArray for HystrixRollingPercentile
+
+### Version 1.4.9 ([Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.netflix.hystrix%22%20AND%20v%3A%221.4.9%22), [Bintray](https://bintray.com/netflixoss/maven/Hystrix/1.4.9/)) ###
+
+* [Pull 799](https://github.com/Netflix/Hystrix/pull/799) Fix thread-safety of writes to HystrixRollingPercentile
+
+### Version 1.4.8 ([Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.netflix.hystrix%22%20AND%20v%3A%221.4.8%22), [Bintray](https://bintray.com/netflixoss/maven/Hystrix/1.4.8/)) ###
+
+* [Pull 797](https://github.com/Netflix/Hystrix/pull/797) Move all histogram reads to a single-threaded path.
+* [Pull 794](https://github.com/Netflix/Hystrix/pull/794) Allow dashboard connection on 'Enter' keypress
+* [Pull 787](https://github.com/Netflix/Hystrix/pull/787) Reject requests after metrics-event-stream servlet shutdown
+* [Pull 785](https://github.com/Netflix/Hystrix/pull/785) Update metrics package from com.codahale.metrics to io.dropwizard.metrics
+
+### Version 1.4.7 ([Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.netflix.hystrix%22%20AND%20v%3A%221.4.7%22), [Bintray](https://bintray.com/netflixoss/maven/Hystrix/1.4.7/)) ###
+
+* [Pull 783](https://github.com/Netflix/Hystrix/pull/783) Upgrade to RxJava 1.0.10
+* [Pull 781](https://github.com/Netflix/Hystrix/pull/781) Shorten collapser stress test to avoid OOM in Travis
+* [Pull 780](https://github.com/Netflix/Hystrix/pull/780) Allow hooks to throw exceptions and not corrupt internal Hystrix state
+* [Pull 779](https://github.com/Netflix/Hystrix/pull/779) Use HdrHistogram for capturing latencies
+* [Pull 778](https://github.com/Netflix/Hystrix/pull/778) Run jmh using more forks and fewer iterations/fork
+* [Pull 776](https://github.com/Netflix/Hystrix/pull/776) Add Bad requests to Hystrix dashboard
+* [Pull 775](https://github.com/Netflix/Hystrix/pull/775) Add counters for number of commands, thread pools, groups
+* [Pull 774](https://github.com/Netflix/Hystrix/pull/774) Add global concurrent Hystrix threads counter
+
+### Version 1.4.6 ([Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.netflix.hystrix%22%20AND%20v%3A%221.4.6%22), [Bintray](https://bintray.com/netflixoss/maven/Hystrix/1.4.6/)) ###
+
+* [Pull 772](https://github.com/Netflix/Hystrix/pull/772) Add try-catch to all hook invocations
+* [Pull 773](https://github.com/Netflix/Hystrix/pull/773) Move threadPool field to end of metrics stream
+* [Pull 770](https://github.com/Netflix/Hystrix/pull/770) Fix AbstractCommand.isCircuitBreakerOpen() return value when circuit is forced open or closed
+* [Pull 769](https://github.com/Netflix/Hystrix/pull/769) Add threadPool to command metrics in event stream
+* [Pull 767](https://github.com/Netflix/Hystrix/pull/767) JMH upgrade and multithreaded benchmark
+
+### Version 1.4.5 ([Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.netflix.hystrix%22%20AND%20v%3A%221.4.5%22), [Bintray](https://bintray.com/netflixoss/maven/Hystrix/1.4.5/)) ###
+
+* [Pull 764](https://github.com/Netflix/Hystrix/pull/764) Upgrade RxJava from 1.0.7 to 1.0.9
+* [Pull 763](https://github.com/Netflix/Hystrix/pull/763) Upgrade Jackson for hystrix-metrics-event-stream from 1.9.2 to 2.5.2
+* [Pull 760](https://github.com/Netflix/Hystrix/pull/760) Set Hystrix-created threads to be daemon
+* [Pull 757](https://github.com/Netflix/Hystrix/pull/757) Update RxNetty version in hystrix-rx-netty-metrics-stream from 0.3.8 to 0.4.7
+* [Pull 755](https://github.com/Netflix/Hystrix/pull/755) Improve Javadoc for HystrixThreadPoolProperties.Setter
+* [Pull 754](https://github.com/Netflix/Hystrix/pull/754) Only fire onFallbackStart/onFallbackError hooks when a user-supplied fallback is invoked
+* [Pull 753](https://github.com/Netflix/Hystrix/pull/753) Add timeout to dashboard for semaphore commands
+* [Pull 750](https://github.com/Netflix/Hystrix/pull/750) First pass at jmh performance benchmarking
+* [Pull 748](https://github.com/Netflix/Hystrix/pull/748) Fix return value of HystrixCircuiBreakerImpl.isOpen when it loses a race to open a circuit
+* [Pull 746](https://github.com/Netflix/Hystrix/pull/746) Improve Javadoc for HystrixCommandProperties.Setter
+
+
+### Version 1.4.4 ([Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.netflix.hystrix%22%20AND%20v%3A%221.4.4%22), [Bintray](https://bintray.com/netflixoss/maven/Hystrix/1.4.4/)) ###
+
+* [Pull 743](https://github.com/Netflix/Hystrix/pull/743) Proper Javadoc deprecation for command timeouts being thread-specific
+* [Pull 742](https://github.com/Netflix/Hystrix/pull/742) Add flag to disable command timeouts
+* [Pull 741](https://github.com/Netflix/Hystrix/pull/741) Bugfix to java.lang.Error handling
+* [Pull 735](https://github.com/Netflix/Hystrix/pull/735) (Javanica) BatchHystrixCommand
+* [Pull 739](https://github.com/Netflix/Hystrix/pull/739) Mark some java.lang.Errors as unrecoverable and never trigger fallback
+* [Pull 738](https://github.com/Netflix/Hystrix/pull/738) Filter out thread pools with no thread activity from hystrics-metrics-event-stream
+* [Pull 732](https://github.com/Netflix/Hystrix/pull/732) Comment out flaky unit test
+
 ### Version 1.4.3 ([Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.netflix.hystrix%22%20AND%20v%3A%221.4.3%22), [Bintray](https://bintray.com/netflixoss/maven/Hystrix/1.4.3/)) ###
 
 * [Pull 731](https://github.com/Netflix/Hystrix/pull/731) Revert to Java 6
